@@ -11,9 +11,9 @@ pico_sdk_init()
 
 add_executable(pico_gpu_v1
 	main.cpp
-	)
+		ili934x.h ili934x.cpp)
 
-target_link_libraries(pico_gpu_v1 pico_stdlib)
+target_link_libraries(pico_gpu_v1 pico_stdlib hardware_spi)
 
 pico_enable_stdio_usb(pico_gpu_v1 1)
 pico_enable_stdio_uart(pico_gpu_v1 0)
